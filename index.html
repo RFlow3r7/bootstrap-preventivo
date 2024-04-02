@@ -9,7 +9,6 @@
     <title>Boolean Factory</title>
 </head>
 
-
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,38 +36,53 @@
             <div class="row">
                 <div class="col-8 col-sm-6">
                     <h2> Richiesta Preventivo</h2>
-
                     <form>
+                        <div class="form-group">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="Name">Nome</label>
+                                    <input type="text" class="form-control" id="InputName" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="LastName">Cognome</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder="LastName">
+                                </div>
 
-                        <fieldset disabled>
-                            <legend>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo
-                            </legend>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="Email">
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="disabledTextInput" class="form-label">Disabled input</label>
-                                <input type="text" id="disabledTextInput" class="form-control"
-                                    placeholder="Disabled input">
-                            </div>
-                            <div class="mb-3">
-                                <label for="disabledSelect" class="form-label">Disabled select menu</label>
-                                <select id="disabledSelect" class="form-select">
-                                    <option>Disabled select</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                                    <label class="form-check-label" for="disabledFieldsetCheck">
-                                        Can't check this
-                                    </label>
+                                <div class="form-group">
+                                    <label for="SelezionaLavoro" class="form-label">Seleziona il tipo di lavoro
+                                        richiesto</label>
+                                    <select id="SelezionaLavoro" class="form-select">
+                                        <option>Backed Development</option>
+                                        <option>Frontend Development</option>
+                                        <option>Project Analysis</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Eventuali richieste</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </fieldset>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Code">Codice Promozionale (Facoltativo)</label>
+                            <input type="text" class="form-control" id="Code" placeholder="Code">
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="Policy">
+                            <label class="form-check-label" for="Policy">Accetto privacy e policy</label>
+                        </div>
+                        <button type="submit" id="Button" class="btn btn-primary">Calcola Preventivo</button>
                     </form>
 
                 </div>
-
                 <div class="col-4 col-sm-6">
                     <div class="card" style="width: 25rem;">
                         <img src="img/coding-logo-in-a-modern-style-Graphics-7189080-1.jpg" class="card-img-top"
@@ -89,18 +103,20 @@
             </div>
         </header>
 
-
-        <footer class="mt-4 py-3 bg-dark">
-            <div class="container text-center">
-                <span class="text-white">© 2024 Bool Factory. All rights reserved.</span>
-            </div>
-        </footer>
+        <div class="text-center my-2 ">
+            <h2 class="align-items-center">Prezzo Finale</h2>
+            <div class="price-container" id="price"></div>
+        </div>
 
     </div>
 
+    <footer class="mt-4 py-3 bg-dark">
+        <div class="container text-center">
+            <span class="text-white">© 2024 Bool Factory. All rights reserved.</span>
+        </div>
+    </footer>
 
-
-
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./app.js"></script>
