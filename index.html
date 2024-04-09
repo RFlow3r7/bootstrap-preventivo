@@ -82,14 +82,21 @@
                         </div>
                         <div id="codeError"></div>
 
-
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="Policy">
                             <label class="form-check-label" for="Policy">Accetto privacy e policy</label>
                         </div>
-                        <button type="submit" id="Button" class="btn btn-primary">Calcola Preventivo</button>
+
+                        <div class="d-flex justify-content-around mb-3">
+                            <button type="submit" id="Button" class="btn btn-primary">Calcola Preventivo</button>
+                            <div class="text-center my-2 border border-dark rounded" style="max-width: 600px;">
+                                <h2 class="align-items-center">Prezzo Finale</h2>
+                                <div class="price-container" id="price"></div>
+                            </div>
+                        </div>
                     </form>
                 </div>
+
                 <div class="col-lg-3">
                     <div class="card">
                         <img src="img/coding-logo-in-a-modern-style-Graphics-7189080-1.jpg"
@@ -111,10 +118,9 @@
         </div>
     </main>
 
-    <div class="text-center my-2 border border-dark rounded" style="max-width: 600px; margin: 0 auto;">
-        <h2 class="align-items-center">Prezzo Finale</h2>
-        <div class="price-container" id="price"></div>
-    </div>
+
+
+
 
     <footer class="mt-5 py-3 bg-dark">
         <div class="container text-center">
